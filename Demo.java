@@ -1,6 +1,10 @@
 class Stack{
 	
-	
+	Stack(int initSize,double loadFact)({
+		this.loadFact=loadFact;
+		this.initSize=initSize;
+		
+		}
 	
 }
 
