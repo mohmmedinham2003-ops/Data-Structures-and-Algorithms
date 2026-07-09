@@ -1,4 +1,8 @@
 class Stack{
+	private int[] dataArray;
+	private int nextIndex;
+	private double loadfact;
+	private int initSize;
 	
 	Stack(int initSize,double loadFact)({
 		this.loadFact=loadFact;
