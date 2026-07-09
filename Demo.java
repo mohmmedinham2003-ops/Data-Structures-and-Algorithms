@@ -5,10 +5,12 @@ class Stack{
 	private int initSize;
 	
 	Stack(int initSize,double loadFact)({
+		dataArray = new int[initSize];
+		nextIndex = 0;
 		this.loadFact=loadFact;
 		this.initSize=initSize;
 		
-		}
+	}
 	
 }
 
