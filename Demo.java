@@ -245,6 +245,26 @@ class List{
 		this.loadFact = loadFact;
 		this.initSize = initSize;
 	}
+	private void extendsArray(){
+	int tempDataArray[] =new int[dataArray.length+(int)(loadFact*dataArray.length)];
+	for(int i =0;i<dataArray.length;i++){
+	tempDataArray[i] = dataArray[i];	
+	}	
+		dataArray = tempDataArray;
+	}
+	
+	private boolean isFull(){
+	return nextIndex>=dataArray.length;	
+		
+	}
+	
+	public void add(int data){
+	if(isFull()){
+	extendsArray();		
+	}
+	dataArray[index++] = data;	
+	}
+	
 	
 }
 
