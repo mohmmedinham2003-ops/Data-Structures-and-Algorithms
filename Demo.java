@@ -5,16 +5,16 @@ class Stack{
 	private double loadFact;
 	private int initSize;
 	
-	Stack(int initSize,double loadFact)({
-		dataArray = new int[initSize];
-		nextIndex = 0;
+	Stack(int initSize, double loadFact){
+		dataArray=new int[initSize];
+		nextIndex=0;
 		this.loadFact=loadFact;
 		this.initSize=initSize;
 		
 	}
 	
 	private void extendArray(){
-	int tempArray[] = new int[dataArray.length+(int)(loadFact*dataArray.length)];
+	int tempDataArray[] = new int[dataArray.length+(int)(loadFact*dataArray.length)];
 	for(int i = 0;i<dataArray.length;i++){
 		
 		tempDataArray[i] = dataArray[i];
@@ -27,9 +27,27 @@ class Stack{
 	return nextIndex >= dataArray.length;	
 	}
 	
+	//insert all peek,push,pop
+	public void push(int data){
+	if(isFull()){
+	extendArray();	
+	}	
+	dataArray[nextIndex++] = data;	
+	}
+	
+	public void pop(){
+		if(!isEmpty()){
+		nextIndex--;	
+		}
+		
+	}
 	
 	public int peek(){
-		
+		return isEmpty() ?-1:dataArray[nextIndex-1];
+	}
+	
+	public int poll(){
+	return isEmpty() ?-1:[--nextIndex];	
 	}
 	
 	public int size(){
@@ -70,12 +88,6 @@ class Stack{
 	public int capacity(){
 	return dataArray.length;	
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	
