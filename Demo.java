@@ -108,6 +108,7 @@ class Demo{
 */
 
 //Queue Execution
+
 class Queue{
 	private int[] dataArray;
 	private int nextIndex;
@@ -137,11 +138,40 @@ class Queue{
 	return nextIndex;	
 		
 	}
+	public void trimToSize(){
+	int[] tempDataArray = new int[size()];
+	for(int i=0;i<dataArray.length;i++){
+	tempDataArray[i] = dataArray[i];	
+	}
+		dataArray = tempDataArray;
+	}
 	
 	public void clear(){
 		dataArray = new int[initSize];
 		nextIndex = 0;
 	}
+	
+	public int peek(){
+	return isEmpty() ? -1:dataArray[0];	
+	}
+	
+	public int poll(){
+		if(!isEmpty()){
+			int firstData = dataArray[0];
+			remove();
+			return firstData;
+			
+		}
+		return -1;
+	}
+	
+	public void add(int data){
+		if(isFull()){
+		extendsArray();	
+		}
+		dataArray[nextIndex++] = data;
+	}
+		
 	
 	public void remove(){
 		if(!isEmpty()){
@@ -152,16 +182,22 @@ class Queue{
 		}
 	}
 	
+	public void clear(){
+	dataArray = new int[initSize];
+	nextIndex = 0;	
+	}
+	
 	public int search(int data){
 		for(inti = 0;i<nextIndex;i++){
 		if(dataArray[i]==data){
 		return i;	
 		}	
 		return -1;
+	}	
 	}
+
 	
-		
-	}
+	
 	
 	public void display(){
 	System.out.print("[");
