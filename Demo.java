@@ -129,6 +129,42 @@ class Queue{
 	dataArray = tempDataArray;
 	}
 	
+	public boolean isFull(){
+	return nextIndex>=dataArray.length;		
+	}
+	
+	public int size(){
+	return nextIndex;	
+		
+	}
+	
+	public void clear(){
+		dataArray = new int[initSize];
+		nextIndex = 0;
+	}
+	
+	public void remove(){
+		if(!isEmpty()){
+			for(int i = 0;i<nextIndex-1;i++){
+			dataArray[i] = dataArray[i+1];	
+			}
+			nextIndex--;
+		}
+	}
+	
+	public int search(int data){
+		for(inti = 0;i<nextIndex;i++){
+		if(dataArray[i]==data){
+		return i;	
+		}	
+		return -1;
+	}
+	
+		
+	}
+	
+	
+	
 	
 	
 	
