@@ -1,7 +1,8 @@
 class Stack{
+	
 	private int[] dataArray;
 	private int nextIndex;
-	private double loadfact;
+	private double loadFact;
 	private int initSize;
 	
 	Stack(int initSize,double loadFact)({
@@ -9,6 +10,16 @@ class Stack{
 		nextIndex = 0;
 		this.loadFact=loadFact;
 		this.initSize=initSize;
+		
+	}
+	
+	private void extendArray(){
+	int tempArray[] = new int[dataArray.length+(int)(loadFact*dataArray.length)];
+	for(int i = 0;i<dataArray.length;i++){
+		
+		tempDataArray[i] = dataArray[i];
+		}
+		dataArray = tempDataArray;
 		
 	}
 	
@@ -41,4 +52,3 @@ class Demo{
 	
 	
 	}
-
