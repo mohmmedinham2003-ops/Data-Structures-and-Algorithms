@@ -47,7 +47,7 @@ class Stack{
 	}
 	
 	public int poll(){
-	return isEmpty() ?-1:[--nextIndex];	
+	return isEmpty() ?-1:dataArray[--nextIndex];	
 	}
 	
 	public int size(){
@@ -115,7 +115,15 @@ class Demo{
 			s1.display();
 			System.out.println("Size :"+s1.size());
 		
-		
+			int topData;
+			topData = s1.peek();
+			System.out.println("Top data" + topData);//120
+			s1.display(); //[120,110,100,90...50,40,30,20,10]
+
+			topData = s1.poll();
+			System.out.println("Top data: "+topData);//120
+			System.out.println("Top data" + topData);//120
+			s1.display(); //[120,110,100,90...50,40,30,20,10]
 		
 		}
 	
