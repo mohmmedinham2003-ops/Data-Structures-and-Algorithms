@@ -108,7 +108,7 @@ class Demo{
 */
 
 //Queue Execution
-
+/*
 class Queue{
 	private int[] dataArray;
 	private int nextIndex;
@@ -233,3 +233,42 @@ class Demo{
 			
 	}
 }
+*/
+
+//List Execution
+
+class List{
+	
+	List(int initSize,double loadFact){
+		dataArray = new int[initSize];
+		nextIndex = 0;
+		this.loadFact = loadFact;
+		this.initSize = initSize;
+	}
+	
+}
+
+class Demo{
+	public static void main(String args[]){
+		List list1=new List(12,0.25);
+		list1.add(10); //Insertion order
+		list1.add(20);
+		list1.add(30);
+		list1.add(40);
+		list1.add(50);
+		list1.add(60);
+		list1.add(70);
+		list1.add(80);
+		list1.add(90);
+		list1.display(); //[10,20,30,40,50 ........90]
+		
+		list1.removeFirst();
+		list1.removeLast();
+		list1.display(); //[20,30, ........90]
+		
+	}
+	
+	
+	
+	}
+
