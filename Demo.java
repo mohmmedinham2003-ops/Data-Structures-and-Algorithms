@@ -23,7 +23,65 @@ class Stack{
 		
 	}
 	
+	private boolean isFull(){
+	return nextIndex >= dataArray.length;	
+	}
+	
+	
+	public int peek(){
+		
+	}
+	
+	public int size(){
+	return nextIndex;	
+	}
+	
+	public void trimToSize(){
+	int[]	tempDataArray = new int[size()];
+	for(int i = 0;i<dataArray.length;i++){
+	tempDataArray[i] = dataArray[i];	
+	}
+	dataArray = tempDataArray;
+		
+	}
+	
+	public void clear(){
+	dataArray = new int[initSize];
+	nextIndex = 0;	
+	}
+	
+	public int seach(int data){
+	return -1;		
+	}
+	
+	public void display(){
+	System.out.print("[");
+	for(int i = nextIndex-1;i>=0;i--){
+	System.out.print(dataArray[i]+", ");	
+	}
+	System.out.print(isEmpty()?"empty]":"\b\b]");	
+		
+	}
+	
+	public boolean isEmpty(){
+	return nextIndex <=0;	
+	}
+	
+	public int capacity(){
+	return dataArray.length;	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
 
 
 class Demo{
