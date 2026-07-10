@@ -163,16 +163,25 @@ class Queue{
 		
 	}
 	
+	public void display(){
+	System.out.print("[");
+	for(int i = 0;i<nextIndex;i++){
+	System.out.print(dataArray[i]+",");	
+		
+	}	
+		System.out.println(isEmpty()?"empty]":"\b\b]");
 	
+	}
 	
+	public boolean isEmpty(){
+	return nextIndex<=0;		
+	}
 	
-	
-	
-	
-	
-	
-	
-	
+	public int capacity(){
+	return dataArray.length;	
+		
+	}
+		
 }
 
 
