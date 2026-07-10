@@ -216,10 +216,20 @@ class Demo{
 		q1.display(); //[10,20,30,40,50 ........120]
 		System.out.println("Size      : "+q1.size()); //12
 		
+		q1.remove();
+		q1.display();
+		System.out.println("Size      : "+q1.size()); //11
+		System.out.println("Index of 50 : "+q1.search(50)); //3
 		
+		int firstData  =q1.peek();
+		System.out.println("Size : "+q1.size());
+		System.out.println("Index of 50: "+q1.search(50));
+		q1.display();//[20,30,40,50,.......120]
+		
+		firstData = q1.poll();
+		System.out.println("First Data: "+firstData);
+		System.out.println("Callingf after poll()....");
+		q1.display();//[30,40,50,.......120]
+			
 	}
 }
-
-
-
-
