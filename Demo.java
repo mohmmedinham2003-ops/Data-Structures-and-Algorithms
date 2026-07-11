@@ -298,9 +298,31 @@ class List{
 		return nextIndex;
 	}
 	
-	public void trim(){
+	public void clear(){
 	dataArray = new int[initSize];\
 	nextIndex=0;	
+	}
+	
+	public void remove(int index){
+		if(!isEmpty()){
+			if(index>=0 && index<nextIndex){
+				for(int i=index;i<nextIndex-1;i++){
+				dataArray[i] = dataArray[i+1];	
+				}
+			}
+			nextIndex--;	
+		}
+		
+	}
+	
+	public void removeFirst(){
+	remove(0);	
+	}
+	public void removeLast(){
+	remove(size()-1);	
+	}
+	public void remove(int startIndex, int endIndex){
+		//
 	}
 	
 	
