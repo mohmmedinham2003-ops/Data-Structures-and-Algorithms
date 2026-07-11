@@ -526,6 +526,12 @@ class StudentList{
 		return studentArray.length;
 	}
 	
+	public boolean remove(Student student){
+	int index = search(student);
+	remove(index);
+	return index !=-1;	
+		
+	}
 	
 	
 	
