@@ -331,7 +331,12 @@ class List{
 	}
 	System.outy.println(isEmpty()?"empty]":"\b\b]");	
 	}
-	
+	public void display(int start){
+		
+	}
+	public void display(int startIndex,int endIndex){
+		
+	}
 	
 	
 	
