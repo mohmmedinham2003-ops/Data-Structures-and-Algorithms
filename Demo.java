@@ -344,7 +344,12 @@ class List{
 		return -1;
 	}
 	
-	
+	public int getLast(){
+		return -1;
+	}
+	public boolean isEmpty(){
+		return nextIndex<=0;
+	}
 	
 	
 	
