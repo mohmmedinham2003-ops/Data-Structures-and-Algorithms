@@ -322,7 +322,14 @@ class List{
 	remove(size()-1);	
 	}
 	public void remove(int startIndex, int endIndex){
-		//
+		//need to code
+	}
+	public void display(){
+	System.out.print("[");
+	for(int i=0;i<nextIndex;i++){
+	System.out.print(dataArray[i]+", ");	
+	}
+	System.outy.println(isEmpty()?"empty]":"\b\b]");	
 	}
 	
 	
