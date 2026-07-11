@@ -420,8 +420,15 @@ class StudentList{
 	private double loadFact;
 	private int initSize;
 	
+	StudentList(int initSize, double loadFact){
+		studentArray=new Student[initSize];
+		nextIndex=0;
+		this.loadFact=loadFact;
+		this.initSize=initSize;
+	}
+	
 	private void extendsArray(){
-	Student tempStudentArray[]=new Student[studentArray.length+(int)(loadFact*studentArray)];
+	Student tempStudentArray[] = new Student[studentArray.length+(int)(loadFact*studentArray.length)];
 	for(int i =0;i<studentArray.length;i++){
 			tempStudentArray[i]=studentArray[i];
 	}
@@ -436,8 +443,7 @@ class StudentList{
 		if(isFull()){
 			extendsArray();
 		}
-		studentArray[index] = student;
-		nextIndex++;
+		studentArray[nextIndex++] = student;
 	}
 	
 	public void add(int index,Student student){
@@ -478,8 +484,8 @@ class StudentList{
 	}
 	
 	public void remove(int index){
-		if(isEmpty()){
-		if(index>=0;&&index < nextIndex){
+		if(!isEmpty()){
+		if(index>=0 &&index < nextIndex){
 		for(int i =index;i<nextIndex-1;i++){
 			studentArray[i] = studentArray[i+1];
 		}	
@@ -495,6 +501,14 @@ class StudentList{
 		remove(size()-1);
 	}
 	
+	public int search(Student student){
+		for(int i=0;i<nextIndex;i++){
+		if(student.equals(studentArray[i])){
+		return i;	
+		}
+		}
+		return -1;
+	}
 	public void display(){
 	System.out.print("{");
 	for(int i= 0;i<nextIndex;i++){
@@ -534,7 +548,6 @@ class StudentList{
 	}
 	
 	
-	
 }
 
 
@@ -542,7 +555,7 @@ class StudentList{
 
 class Demo{
 	public static void main(String args[]){
-		StudentList stList - new StudentList(12,0.25);
+		StudentList stList=new StudentList(12,0.25);
 		stList.add(new Student("S0001","Nimal",65,67));
 		stList.add(new Student("S0002","Amal",85,70));
 		stList.add(new Student("S0003","Bimal",35,30));
@@ -556,12 +569,3 @@ class Demo{
 	
 	
 }
-
-
-
-
-
-
-
-
-
