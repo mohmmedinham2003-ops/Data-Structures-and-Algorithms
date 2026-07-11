@@ -383,3 +383,40 @@ class Demo{
 */
 
 //List Example
+
+class Student{
+	
+}
+
+class StudentList{
+	
+	
+	
+}
+
+
+class Demo{
+	public static void main(String args[]){
+		StudentList stList - new StudentList(12,0.25);
+		stList.add(new Student("S0001","Nimal",65,67));
+		stList.add(new Student("S0002","Amal",85,70));
+		stList.add(new Student("S0003","Bimal",35,30));
+		stList.add(new Student("S0004","Ramal",55,70));
+		stList.add(new Student("S0005","Anil",95,90));
+		stList.display(); //{[S0001,Nimal,65,76], [S0002","Amal",85,70]...}
+		stList.remove(new Student("S0003","Bimal",35,30));
+		stList.display(); //{[S0001,Nimal,65,76], [S0002","Amal",85,70]...}
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
