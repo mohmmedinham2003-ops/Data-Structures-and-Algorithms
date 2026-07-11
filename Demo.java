@@ -265,6 +265,53 @@ class List{
 	dataArray[index++] = data;	
 	}
 	
+	public void add(int index,int data){
+		if(isFull()){
+		extendsArray();		
+		}
+		if(index>=0&&index <=nextIndex){
+		for(int i = nextIndex-1;i>=nextIndex;i--){
+		dataArray[i+1]=dataArray[i];	
+		}
+		dataArray[index] = data;
+		nextIndex++;	
+		}
+		
+	}
+	
+	public void addFirst(int data){
+		add(0,data);	
+	}
+	public void addLast(int data){
+	add(nextIndex,data);		
+	}
+	
+	public void trimToSize(){
+	int[] tempDataArray = new int[dataArray.length];
+	for(int i=0;i<dataArray.length;i++){
+		tempDataArray[i] = dataArray[i];
+	}	
+		dataArray = tempDataArray;
+	}
+	
+	public int size(){
+		return nextIndex;
+	}
+	
+	public void trim(){
+	dataArray = new int[initSize];\
+	nextIndex=0;	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
 
