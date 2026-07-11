@@ -351,11 +351,10 @@ class List{
 		return nextIndex<=0;
 	}
 	
-	
-	
-	
-	
-	
+	public int capacity(){
+		return dataArray.length;
+	}
+
 	
 }
 
