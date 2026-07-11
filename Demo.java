@@ -337,7 +337,12 @@ class List{
 	public void display(int startIndex,int endIndex){
 		
 	}
-	
+	public int get(int index){
+		return -1;
+	}
+	public int getFirst(){
+		return -1;
+	}
 	
 	
 	
