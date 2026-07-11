@@ -236,7 +236,7 @@ class Demo{
 */
 
 //List Execution
-
+/*
 class List{
 	
 	List(int initSize,double loadFact){
@@ -378,7 +378,8 @@ class Demo{
 		
 	}
 	
-	
-	
 	}
 
+*/
+
+//List Example
