@@ -495,8 +495,36 @@ class StudentList{
 		remove(size()-1);
 	}
 	
+	public void display(){
+	System.out.print("{");
+	for(int i= 0;i<nextIndex;i++){
+	System.out.print(studentArray[i].toString()+", ");	
+	}
+	System.out.println(isEmpty()?"empty]":"\b\b}");	
+		
+	}
 	
-	
+	public void display(int start){
+		
+	}
+	public void display(int startIndex, int endIndex){
+		
+	}
+	public Student get(int index){
+		return null;
+	}
+	public Student getFirst(){
+		return null;
+	}
+	public Student getLast(){
+		return null;
+	}
+	public boolean isEmpty(){
+		return nextIndex<=0;
+	}
+	public int capacity(){
+		return studentArray.length;
+	}
 	
 	
 	
